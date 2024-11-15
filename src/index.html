@@ -9,5 +9,19 @@
 </head>
 <body>
   <app-root></app-root>
+  <div id="image-container"></div>
+  <script>
+    function loadImages() {
+      const imageContainer = document.getElementById('image-container');
+      const images = ['image1.jpg', 'image2.png', 'image3.gif']; 
+
+      images.forEach(image => {
+        const imgElement = document.createElement('img');
+        imgElement.src = `images/${image}`;
+        imageContainer.appendChild(imgElement);
+      });
+    }
+    loadImages();
+  </script>
 </body>
 </html>
